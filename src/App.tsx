@@ -1,28 +1,33 @@
-import { useState } from 'react'
-import './App.css'
+import { } from 'react'
+import { TopPage } from './pages/TopPage'
 
-function App() {
-  const [count, setCount] = useState(0)
+export function App() {
 
   return (
     <>
-      <h1 className="title">進捗どうなん.com</h1>
-      <div className="fixed-grid">
-
-        <div className="grid">
-          <div className="cell card">
-            <header className="card-header">
-              <h2 className="card-header-title">進捗どうなん.com とは？</h2>
-            </header>
-
-          </div>
-          <div className="cell">Cell 2</div>
-
-
+      <nav className="navbar" role="navigation" aria-label="main navigation">
+        <div className="navbar-brand">
+          <a className="navbar-item" href="/">
+            <h1>進捗どうなん.com</h1>
+          </a>
         </div>
+        {/*         
+        <div className="navbar-menu">
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <div className="buttons">
+                <a className="button is-primary">
+                  今すぐ始める
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        */}
+      </nav>
+      <div className="container is-max-desktop">
+        <TopPage />
       </div>
     </>
   )
 }
-
-export default App
