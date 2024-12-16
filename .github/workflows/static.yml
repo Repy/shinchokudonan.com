@@ -38,7 +38,15 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist'
+          path: dist
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
+      - name: Cloudflare Pages
+        uses: cloudflare/pages-action@v1.5.0
+        with:
+          apiToken: ${CF_PAGES_APITOKEN}
+          accountId: 2d84515d2e91cd131c5d494c1a8cc5e8
+          projectName: shinchokudonan-com
+          directory: dist
+
+          
